@@ -19,7 +19,7 @@ Spark Core: là nền tảng của các phần còn lại đảm nhận vai trò
 -	Phân tích thời gian thực:
 -	Apache Spark có thể xử lý dữ liệu thời gian thực tức là dữ liệu đến từ các luồng sự kiện thời gian thực với tốc độ hàng triệu sự kiện mỗi giây. Ví dụ: Data Twitter chẳng hạn hoặc luợt chia sẻ, đăng bài trên Facebook. Sức mạnh Spark là khả năng xử lý luồng trực tiếp hiệu quả.
 -	Apache Spark có thể được sử dụng để xử lý phát hiện gian lận trong khi thực hiện các giao dịch ngân hàng. Đó là bởi vì, tất cả các khoản thanh toán trực tuyến được thực hiện trong thời gian thực và chúng ta cần ngừng giao dịch gian lận trong khi quá trình thanh toán đang diễn ra.
--	Mục tiêu sử dụng:
+4.	Mục tiêu sử dụng:
 +	Xử lý dữ liệu nhanh và tương tác
 +	Xử lý đồ thị
 +	Công việc lặp đi lặp lại
@@ -27,7 +27,7 @@ Spark Core: là nền tảng của các phần còn lại đảm nhận vai trò
 +	joining Dataset
 +	Machine Learning
 +	Apache Spark là Framework thực thi dữ liệu dựa trên Hadoop HDFS. Apache Spark không thay thế cho Hadoop nhưng nó là một framework ứng dụng. Apache Spark tuy ra đời sau nhưng được nhiều người biết đến hơn Apache Hadoop vì khả năng xử lý hàng loạt và thời gian thực.
-4. MapReduce
+5. MapReduce
 MapReduce được chia thành hàm là Map và Reduce. Những hàm này được định nghĩa bởi người dùng và là hai giai đoạn liên tiếp trong quá trình xử lý dữ liệu.
 
 + Map nhận input là tập các cặp khóa/giá trị và output là tập các cặp khóa/giá trị trung gian và ghi xuống đĩa cứng và thông báo cho Reduce nhận dữ liệu đọc.
