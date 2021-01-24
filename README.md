@@ -1,10 +1,10 @@
 # spark_mapreduce_demtansuattu
 Spark
 1. Giới thiệu về Apache Spark
-Apache Spark là một framework mã nguồn mở tính toán cụm.  Spark cung cấp một giao diện để lập trình toàn bộ các cụm với tính song song dữ liệu ngầm và khả năng chịu lỗi. Ban dầu được phát triển bởi Đại học California, AMPlab sau đó được foundation duy trì phát triển từ 2013 cho đến nay.
-Việc tính toán của Spark được thực hiện trong bộ nhớ trong (in-memories) hay trong RAM. Đồng thời việc tính toán được thực hiện cùng lúc trên nhiều máy tính khác nhau nên Spark có tốc độ xử lý nhanh.
-Spark cho phép xử lý dữ liệu theo thời gian thực, vừa nhận dữ liệu từ các nguồn khác nhau đồng thời thực hiện ngay việc xử lý trên dữ liệu vừa nhận được ( Spark Streaming).
-Spark không có hệ thống file của riêng mình, nó sử dụng hệ thống file khác như: HDFS, Cassandra, S3,…. Spark hỗ trợ nhiều kiểu định dạng file khác nhau (text, csv, json…) đồng thời nó hoàn toàn không phụ thuộc vào bất cứ một hệ thống file nào.
+- Apache Spark là một framework mã nguồn mở tính toán cụm.  Spark cung cấp một giao diện để lập trình toàn bộ các cụm với tính song song dữ liệu ngầm và khả năng chịu lỗi. Ban dầu được phát triển bởi Đại học California, AMPlab sau đó được foundation duy trì phát triển từ 2013 cho đến nay.
+- Việc tính toán của Spark được thực hiện trong bộ nhớ trong (in-memories) hay trong RAM. Đồng thời việc tính toán được thực hiện cùng lúc trên nhiều máy tính khác nhau nên Spark có tốc độ xử lý nhanh.
+- Spark cho phép xử lý dữ liệu theo thời gian thực, vừa nhận dữ liệu từ các nguồn khác nhau đồng thời thực hiện ngay việc xử lý trên dữ liệu vừa nhận được ( Spark Streaming).
+- Spark không có hệ thống file của riêng mình, nó sử dụng hệ thống file khác như: HDFS, Cassandra, S3,…. Spark hỗ trợ nhiều kiểu định dạng file khác nhau (text, csv, json…) đồng thời nó hoàn toàn không phụ thuộc vào bất cứ một hệ thống file nào.
 2. Thành phần của Spark
  Spark có 5 thành phần chính : Spark Core, Spark Streaming, Spark SQL, MLlib và GraphX, trong đó:
 Spark Core: là nền tảng của các phần còn lại đảm nhận vai trò thực hiện tính toán trong bộ nhớ trong và tham chiếu các dữ liệu được lưu trữ ở bên ngoài, các thành phần còn lại muốn thực hiện phải thông qua Spark Core
