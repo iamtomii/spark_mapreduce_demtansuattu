@@ -1,6 +1,6 @@
 # spark_mapreduce_demtansuattu
 ## Spark
-1. Giới thiệu về Apache Spark
+**1. Giới thiệu về Apache Spark**
 - Apache Spark là một framework mã nguồn mở tính toán cụm.  Spark cung cấp một giao diện để lập trình toàn bộ các cụm với tính song song dữ liệu ngầm và khả năng chịu lỗi. Ban dầu được phát triển bởi Đại học California, AMPlab sau đó được foundation duy trì phát triển từ 2013 cho đến nay.
 - Việc tính toán của Spark được thực hiện trong bộ nhớ trong (in-memories) hay trong RAM. Đồng thời việc tính toán được thực hiện cùng lúc trên nhiều máy tính khác nhau nên Spark có tốc độ xử lý nhanh.
 - Spark cho phép xử lý dữ liệu theo thời gian thực, vừa nhận dữ liệu từ các nguồn khác nhau đồng thời thực hiện ngay việc xử lý trên dữ liệu vừa nhận được ( Spark Streaming).
@@ -8,7 +8,7 @@
 
 <p align="center"> <img src ="https://images.viblo.asia/d3be4c1c-8e98-4797-a68c-5862502b121b.png" />
   
-2. Thành phần của Spark
+**2. Thành phần của Spark**
 - Spark có 5 thành phần chính : Spark Core, Spark Streaming, Spark SQL, MLlib và GraphX, trong đó:
 Spark Core: là nền tảng của các phần còn lại đảm nhận vai trò thực hiện tính toán trong bộ nhớ trong và tham chiếu các dữ liệu được lưu trữ ở bên ngoài, các thành phần còn lại muốn thực hiện phải thông qua Spark Core
 - SparkSQL: cung cấp một kiểu data abstraction mới (SchemaRDD) nhằm hỗ trợ cho cả kiểu dữ liệu có cấu trúc (structured data) và dữ liệu nửa cấu trúc (semi-structured data – thường là dữ liệu dữ liệu có cấu trúc nhưng không đồng nhất và cấu trúc của dữ liệu phụ thuộc vào chính nội dung của dữ liệu ấy). Spark SQL hỗ trợ DSL (Domain-specific language) để thực hiện các thao tác trên DataFrames bằng ngôn ngữ Scala, Java hoặc Python và nó cũng hỗ trợ cả ngôn ngữ SQL với giao diện command-line và ODBC/JDBC server.
@@ -19,14 +19,16 @@ Spark Core: là nền tảng của các phần còn lại đảm nhận vai trò
 <p align="center"> <img src ="https://images.viblo.asia/full/2ba27584-446d-49d8-b9bb-fe876ecb60d5.png" />
 <p align="center"> Các thành phần của Spark </p>
 
-3. Những điểm nổi bật của Spark
+**3. Những điểm nổi bật của Spark**
 -	Xử lý dữ liệu: Spark xử lý dữ liệu theo lô và thời gian thực
 -	Tính tương thích: Có thể tích hợp với tất cả các nguồn dữ liệu và định dạng tệp được hỗ trợ bởi cụm Hadoop.
 -	Hỗ trợ ngôn ngữ: hỗ trợ Java, Scala, Python và R.
 -	Phân tích thời gian thực:
 -	Apache Spark có thể xử lý dữ liệu thời gian thực tức là dữ liệu đến từ các luồng sự kiện thời gian thực với tốc độ hàng triệu sự kiện mỗi giây. Ví dụ: Data Twitter chẳng hạn hoặc luợt chia sẻ, đăng bài trên Facebook. Sức mạnh Spark là khả năng xử lý luồng trực tiếp hiệu quả.
 -	Apache Spark có thể được sử dụng để xử lý phát hiện gian lận trong khi thực hiện các giao dịch ngân hàng. Đó là bởi vì, tất cả các khoản thanh toán trực tuyến được thực hiện trong thời gian thực và chúng ta cần ngừng giao dịch gian lận trong khi quá trình thanh toán đang diễn ra.
-4.	Mục tiêu sử dụng:
+
+**4.	Mục tiêu sử dụng:**
+
 +	Xử lý dữ liệu nhanh và tương tác
 +	Xử lý đồ thị
 +	Công việc lặp đi lặp lại
