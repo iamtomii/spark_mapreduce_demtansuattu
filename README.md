@@ -1,10 +1,13 @@
 # spark_mapreduce_demtansuattu
-Spark
+## Spark
 1. Giới thiệu về Apache Spark
 - Apache Spark là một framework mã nguồn mở tính toán cụm.  Spark cung cấp một giao diện để lập trình toàn bộ các cụm với tính song song dữ liệu ngầm và khả năng chịu lỗi. Ban dầu được phát triển bởi Đại học California, AMPlab sau đó được foundation duy trì phát triển từ 2013 cho đến nay.
 - Việc tính toán của Spark được thực hiện trong bộ nhớ trong (in-memories) hay trong RAM. Đồng thời việc tính toán được thực hiện cùng lúc trên nhiều máy tính khác nhau nên Spark có tốc độ xử lý nhanh.
 - Spark cho phép xử lý dữ liệu theo thời gian thực, vừa nhận dữ liệu từ các nguồn khác nhau đồng thời thực hiện ngay việc xử lý trên dữ liệu vừa nhận được ( Spark Streaming).
 - Spark không có hệ thống file của riêng mình, nó sử dụng hệ thống file khác như: HDFS, Cassandra, S3,…. Spark hỗ trợ nhiều kiểu định dạng file khác nhau (text, csv, json…) đồng thời nó hoàn toàn không phụ thuộc vào bất cứ một hệ thống file nào.
+
+<p align="center"> <img src ="https://images.viblo.asia/d3be4c1c-8e98-4797-a68c-5862502b121b.png" />
+  
 2. Thành phần của Spark
 - Spark có 5 thành phần chính : Spark Core, Spark Streaming, Spark SQL, MLlib và GraphX, trong đó:
 Spark Core: là nền tảng của các phần còn lại đảm nhận vai trò thực hiện tính toán trong bộ nhớ trong và tham chiếu các dữ liệu được lưu trữ ở bên ngoài, các thành phần còn lại muốn thực hiện phải thông qua Spark Core
@@ -27,7 +30,7 @@ Spark Core: là nền tảng của các phần còn lại đảm nhận vai trò
 +	joining Dataset
 +	Machine Learning
 +	Apache Spark là Framework thực thi dữ liệu dựa trên Hadoop HDFS. Apache Spark không thay thế cho Hadoop nhưng nó là một framework ứng dụng. Apache Spark tuy ra đời sau nhưng được nhiều người biết đến hơn Apache Hadoop vì khả năng xử lý hàng loạt và thời gian thực.
-5. MapReduce
+## MapReduce
 - MapReduce được chia thành hàm là Map và Reduce. Những hàm này được định nghĩa bởi người dùng và là hai giai đoạn liên tiếp trong quá trình xử lý dữ liệu.
 
 + Map nhận input là tập các cặp khóa/giá trị và output là tập các cặp khóa/giá trị trung gian và ghi xuống đĩa cứng và thông báo cho Reduce nhận dữ liệu đọc.
@@ -35,3 +38,8 @@ Spark Core: là nền tảng của các phần còn lại đảm nhận vai trò
 + Reduce sẽ nhận khóa trung gian I và tập các giá trị ứng với khóa đó, ghép nối chúng lại để tạo thành một tập khóa nhỏ hơn. Các cặp khóa/giá trị trung gian sẽ  được đưa vào cho hàm reduce thông qua một con trỏ vị trí (iterator). Điều này cho phép ta có thể quản lý một lượng lớn danh sách các giá trị để phù hợp với bộ nhớ.
 
 Thực chất giữa bước map và reduce còn có một bước phụ mà bước này thực hiện song song với bước reduce đó là shuffle. Tức là sau khi map thực hiện xong toàn bộ công việc của mình,  output của map được đặt rải rác trên các cluster khác nhau nên shuffle sẽ làm nhiệm vụ thu thập các cặp khóa-giá trị trung gian do map sinh ra mà có cùng khóa để chuyển qua cho reduce thực hiện tiếp công việc của mình.
+
+### Tài liệu tham khảo
++ https://en.wikipedia.org/wiki/Apache_Spark
++ https://en.wikipedia.org/wiki/MapReduce
++ https://kipalog.com/posts/Tong-quan-mo-hinh-lap-trinh-MapReduce
