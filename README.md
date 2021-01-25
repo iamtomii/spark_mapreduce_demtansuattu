@@ -45,6 +45,19 @@ Spark Core: là nền tảng của các phần còn lại đảm nhận vai trò
 
 Thực chất giữa bước map và reduce còn có một bước phụ mà bước này thực hiện song song với bước reduce đó là shuffle. Tức là sau khi map thực hiện xong toàn bộ công việc của mình,  output của map được đặt rải rác trên các cluster khác nhau nên shuffle sẽ làm nhiệm vụ thu thập các cặp khóa-giá trị trung gian do map sinh ra mà có cùng khóa để chuyển qua cho reduce thực hiện tiếp công việc của mình.
 
+Mapreduce hoạt động dựa vào nguyên tắc chính là “Chia để trị”, như sau:
+
++ Phân chia các dữ liệu cần xử lý thành nhiều phần nhỏ trước khi thực hiện. 
++ Xử lý các vấn đề nhỏ theo phương thức song song trên các máy tính rồi phân tán hoạt động theo hướng độc lập.
++ Tiến hành tổng hợp những kết quả thu được để đề ra được kết quả sau cùng. 
+
+Các bước hoạt động của MapReduce
++ Bước 1: Tiến hành chuẩn bị các dữ liệu đầu vào để cho Map() có thể xử lý.
++ Bước 2: Lập trình viên thực thi các mã Map() để xử  lý. 
++ Bước 3: Tiến hành trộn lẫn các dữ liệu được xuất ra bởi Map() vào trong Reduce Processor
++ Bước 4: Tiến hành thực thi tiếp mã Reduce() để có thể xử lý tiếp các dữ liệu cần thiết.  
++ Bước 5: Thực hiện tạo các dữ liệu xuất ra cuối cùng. 
+
 ### Tài liệu tham khảo
 + https://en.wikipedia.org/wiki/Apache_Spark
 + https://en.wikipedia.org/wiki/MapReduce
